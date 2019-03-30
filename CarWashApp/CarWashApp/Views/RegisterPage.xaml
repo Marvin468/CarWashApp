@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:CarWashApp.ViewsModels"
+             x:Class="CarWashApp.Views.RegisterPage"
+             BackgroundColor="White">
+    <ContentPage.BindingContext>
+        <vm:RegisterViewModel></vm:RegisterViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="25,30">
+            <Label Text="Registrate en CarWashApp" FontSize="25" TextColor="black"
+                   HorizontalOptions="Center"></Label>
+            <Label Text="Una nueva forma de administrar tu auto" HorizontalOptions="Center"
+                   TextColor="black"></Label>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Entry Placeholder="Nombre" ReturnType="Next" x:Name="txtnombre"
+                       Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" PlaceholderColor="black"></Entry>
+                <Entry Placeholder="Apellido" ReturnType="Next" x:Name="txtapellido"
+                        Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" PlaceholderColor="black"></Entry>
+                <Entry Placeholder="Telefono" Keyboard="Telephone" ReturnType="Next" x:Name="txttelefono"
+                        Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" PlaceholderColor="black"></Entry>
+                <Entry Placeholder="Correo" ReturnType="Next" x:Name="txtcorreo"
+                        Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" PlaceholderColor="black"></Entry>
+                <Entry Placeholder="Contraseña" ReturnType="Next" x:Name="txtcontraseña" IsPassword="True"
+                        Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" PlaceholderColor="black"></Entry>
+                <Entry Placeholder="Confirmar Contraseña" ReturnType="Next" x:Name="txtConfirmcontraseña" IsPassword="True"
+                        Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" PlaceholderColor="black"></Entry>
+                <Button Text="Confirmar" BackgroundColor="#0B173B" CornerRadius="15"
+                         Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" IsEnabled="{Binding IsState}" IsVisible="{Binding IsState}" Command="{Binding RegisterComand}" TextColor="white"></Button>
+                <ActivityIndicator  IsRunning="{Binding IsRunning}" Color="#0B173B" x:Name="progreso"  Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" ></ActivityIndicator>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
