@@ -13,6 +13,6 @@ namespace CarWashApp.Models
         public string Direccion { get; set; }
         public string Correo { get; set; }
         public string Contraseña { get; set; }
-
+        public string FechaCreacion { get; set; }
     }
 }
