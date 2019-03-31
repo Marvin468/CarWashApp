@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWashApp.Android", "CarWa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWashApp.iOS", "CarWashApp\CarWashApp.iOS\CarWashApp.iOS.csproj", "{BC762F32-4075-498C-B4B3-3B311CE92DA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWashApp", "CarWashApp\CarWashApp\CarWashApp.csproj", "{32EB3967-C867-4F5A-B1AF-03DCB6522CFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarWashApp", "CarWashApp\CarWashApp\CarWashApp.csproj", "{32EB3967-C867-4F5A-B1AF-03DCB6522CFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
