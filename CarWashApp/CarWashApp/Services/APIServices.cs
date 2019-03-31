@@ -33,22 +33,22 @@ namespace CarWashApp.Services
             set { IsState_ = value; OnPropertyChanged(); }
         }
         public bool IsState_ { get; set; } = true;
-        public async Task<bool> RegisterAsync(string email, string password, string confirmPassword)
-        {
-            var clients = new HttpClient();
-            var model = new RegisterBindingModel
-            {
-                Email = email,
-                Password = password,
-                ConfirmPassword = confirmPassword
-            };
+        //public async Task<bool> RegisterAsync(string email, string password, string confirmPassword)
+        //{
+        //    var clients = new HttpClient();
+        //    var model = new RegisterBindingModel
+        //    {
+        //        Email = email,
+        //        Password = password,
+        //        ConfirmPassword = confirmPassword
+        //    };
 
-            var json = JsonConvert.SerializeObject(model);
-            HttpContent content = new StringContent(json);
-            content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-            var response = await clients.PostAsync("http://gnstecnology-001-site3.etempurl.com/api/Account/Register", content);
-            return response.IsSuccessStatusCode;
-        }
+        //    var json = JsonConvert.SerializeObject(model);
+        //    HttpContent content = new StringContent(json);
+        //    content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+        //    var response = await clients.PostAsync("http://gnstecnology-001-site3.etempurl.com/api/Account/Register", content);
+        //    return response.IsSuccessStatusCode;
+        //}
         //public async Task<bool> RegisterAsyncPersonal(string Nombre, string Apellido, string Telefono,string Direccion)
         //{
         //    var clients = new HttpClient();

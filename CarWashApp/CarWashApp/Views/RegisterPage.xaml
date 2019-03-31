@@ -41,7 +41,8 @@
                 <Entry Placeholder="Confirmar Contraseña" ReturnType="Next" x:Name="txtConfirmcontraseña" IsPassword="True"
                         Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" PlaceholderColor="black"></Entry>
                 <Button Text="Confirmar" BackgroundColor="#0B173B" CornerRadius="15"
-                         Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" IsEnabled="{Binding IsState}" IsVisible="{Binding IsState}" Command="{Binding RegisterComand}" TextColor="white"></Button>
+                         Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" IsEnabled="{Binding IsState}" IsVisible="{Binding IsState}"
+                        Command="{Binding RegisterComand}" TextColor="white"></Button>
                 <ActivityIndicator  IsRunning="{Binding IsRunning}" Color="#0B173B" x:Name="progreso"  Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" ></ActivityIndicator>
             </Grid>
         </StackLayout>
